@@ -1,0 +1,14 @@
+# Ignore Flutter/Dart generated files in ALL sub-folders
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/pubspec.lock
+
+# Ignore IDE specific files
+**/.idea/
+**/*.iml
+
+# Ignore OS system files
+.DS_Store
