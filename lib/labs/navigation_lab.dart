@@ -5,6 +5,8 @@ void main() {
 }
 
 class BottomNavApp extends StatelessWidget {
+  const BottomNavApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,6 +16,8 @@ class BottomNavApp extends StatelessWidget {
   }
 }
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -24,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
     FavoritesScreen(),
-    ProfileScreen(),
+    NavProfileScreen(),
   ];
 
   @override
@@ -59,6 +63,8 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +84,8 @@ class HomeScreen extends StatelessWidget {
   }
 }
 class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,6 +102,8 @@ class DetailsScreen extends StatelessWidget {
   }
 }
 class FavoritesScreen extends StatelessWidget {
+  const FavoritesScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -101,11 +111,13 @@ class FavoritesScreen extends StatelessWidget {
     );
   }
 }
-class ProfileScreen extends StatelessWidget {
+class NavProfileScreen extends StatelessWidget {
+  const NavProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text("Profile Screen"),
     );
   }
-}
+} 

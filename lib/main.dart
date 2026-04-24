@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// These imports ensure main.dart can "see" your lab files
 import 'labs/profile_card_lab.dart';
 import 'labs/navigation_lab.dart';
 import 'labs/catalog_lab.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Widget Exercises',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -32,10 +34,11 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Flutter Widget Exercises', style: TextStyle(color: Colors.black)),
+        title: const Text('Flutter Widget Exercises', 
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.black),
+        centerTitle: true,
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -45,28 +48,28 @@ class MenuScreen extends StatelessWidget {
             'Lab 1: Profile Card',
             'Basic Layout & Card Widget',
             Icons.person,
-            const ProfileCardLab(),
+            const ProfileScreen(), // Matches your Profile code
           ),
           _buildMenuTile(
             context,
             'Lab 2: Navigation',
-            'Bottom Navigation & Navigation Transitions',
+            'Bottom Navigation & Transitions',
             Icons.navigation,
-            const MainScreen(),
+            const MainScreen(), // Matches your Navigation code
           ),
           _buildMenuTile(
             context,
             'Lab 3: Product Catalog',
             'ListView & GridView Builders',
             Icons.shopping_cart,
-            const CatalogLab(),
+            CatalogScreen(), // Matches your Catalog code
           ),
           _buildMenuTile(
             context,
             'Lab 4: User Registration',
             'Forms, Validation & Inputs',
             Icons.app_registration,
-            const RegistrationLab(),
+             RegistrationScreen(), // Matches your Registration code
           ),
         ],
       ),
@@ -92,7 +95,7 @@ class MenuScreen extends StatelessWidget {
         leading: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: Colors.blue.withAlpha(20),
+            color: Colors.blue.withOpacity(0.1),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(icon, color: Colors.blue),

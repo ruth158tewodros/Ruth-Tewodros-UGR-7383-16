@@ -5,6 +5,8 @@ void main() {
 }
 
 class ProfileCardApp extends StatelessWidget {
+  const ProfileCardApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,6 +16,8 @@ class ProfileCardApp extends StatelessWidget {
 }
 
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

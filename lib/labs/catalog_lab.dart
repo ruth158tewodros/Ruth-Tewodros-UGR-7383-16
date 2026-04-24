@@ -5,6 +5,8 @@ void main() {
 }
 
 class CatalogApp extends StatelessWidget {
+  const CatalogApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,6 +24,8 @@ class Product {
 class CatalogScreen extends StatelessWidget {
   final List<Product> products =
       List.generate(10, (index) => Product("Product $index"));
+
+  CatalogScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
